@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Wagner Junior | Staff Full Stack Engineer",
   description:
-    "Staff Full Stack Engineer with 14+ years of experience in TypeScript, React, Node.js, and AI/LLM integration. I ship fast, own systems end-to-end, and obsess over developer experience and product quality.",
+    "Staff Full Stack Engineer building the future of digital identity, Web3 infrastructure, and AI-powered systems. 14+ years shipping at scale.",
 };
 
 export default function RootLayout({
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen bg-bg-primary text-text-secondary font-sans">
+    <html lang="en" className={`${inter.variable} antialiased`}>
+      <body className="min-h-screen bg-bg-primary text-text-secondary font-sans selection:bg-accent/30 selection:text-text-primary">
         {children}
       </body>
     </html>

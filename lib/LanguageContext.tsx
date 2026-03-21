@@ -32,11 +32,11 @@ function subscribe(callback: () => void) {
 
 function getSnapshot(): Language {
   const stored = localStorage.getItem(LANG_KEY);
-  return stored === "en" || stored === "pt" ? stored : "pt";
+  return stored === "en" || stored === "pt" ? stored : "en";
 }
 
 function getServerSnapshot(): Language {
-  return "pt";
+  return "en";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

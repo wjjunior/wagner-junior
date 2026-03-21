@@ -4,25 +4,31 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { type ReactNode } from "react";
 
 const KEYWORDS = [
-  "Staff Engineer",
+  "Staff",
   "TypeScript",
   "React",
   "Node.js",
   "AI",
   "LLM",
+  "D3",
+  "Web3",
   "PostgreSQL",
   "Redis",
   "AWS",
-  "ADRs",
-  "CI/CD",
+  "NestJS",
+  "Kafka",
+  "GraphQL",
 ];
 
 function highlightKeywords(text: string): ReactNode[] {
-  const pattern = new RegExp(`(${KEYWORDS.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "g");
+  const pattern = new RegExp(
+    `(${KEYWORDS.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+    "g"
+  );
   const parts = text.split(pattern);
   return parts.map((part, i) =>
     KEYWORDS.includes(part) ? (
-      <span key={i} className="text-text-primary">
+      <span key={i} className="text-text-primary font-medium">
         {part}
       </span>
     ) : (
@@ -35,15 +41,20 @@ export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about">
-      <h2 className="lg:hidden sticky top-0 z-20 bg-bg-primary/75 backdrop-blur-md py-5 text-sm font-bold uppercase tracking-widest text-text-primary">
-        {t.nav.about}
-      </h2>
-      {t.about.map((paragraph, index) => (
-        <p key={index} className="mb-4 text-sm leading-relaxed">
-          {highlightKeywords(paragraph)}
-        </p>
-      ))}
+    <section id="about" className="scroll-mt-24">
+      <div className="flex items-center gap-4 mb-8">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-accent-light">
+          {t.about.title}
+        </h2>
+        <div className="h-px flex-1 bg-border" />
+      </div>
+      <div className="space-y-5">
+        {t.about.paragraphs.map((paragraph, index) => (
+          <p key={index} className="text-base leading-relaxed">
+            {highlightKeywords(paragraph)}
+          </p>
+        ))}
+      </div>
     </section>
   );
 }

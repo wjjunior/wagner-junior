@@ -6,19 +6,28 @@ export default function LanguageToggle() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div role="group" aria-label="Language toggle" className="flex items-center text-sm">
-      <button
-        onClick={() => setLanguage("pt")}
-        className={`${language === "pt" ? "text-text-primary font-bold" : "text-text-secondary"} focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2`}
-      >
-        PT
-      </button>
-      <span className="text-text-secondary mx-1">|</span>
+    <div role="group" aria-label="Language toggle" className="flex items-center gap-1.5">
       <button
         onClick={() => setLanguage("en")}
-        className={`${language === "en" ? "text-text-primary font-bold" : "text-text-secondary"} focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2`}
+        aria-label="English"
+        className={`text-xs font-medium px-2 py-1 rounded transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+          language === "en"
+            ? "text-text-primary bg-accent/10 border border-accent/20"
+            : "text-text-muted hover:text-text-secondary border border-transparent"
+        }`}
       >
         EN
+      </button>
+      <button
+        onClick={() => setLanguage("pt")}
+        aria-label="Português"
+        className={`text-xs font-medium px-2 py-1 rounded transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
+          language === "pt"
+            ? "text-text-primary bg-accent/10 border border-accent/20"
+            : "text-text-muted hover:text-text-secondary border border-transparent"
+        }`}
+      >
+        PT
       </button>
     </div>
   );
