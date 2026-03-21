@@ -20,7 +20,7 @@ export default function LanguageToggle() {
       </button>
       <button
         onClick={() => setLanguage("pt")}
-        aria-label="Português"
+        aria-label="Portuguese"
         className={`text-xs font-medium px-2 py-1 rounded transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
           language === "pt"
             ? "text-text-primary bg-accent/10 border border-accent/20"
