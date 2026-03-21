@@ -1,6 +1,35 @@
 "use client";
 
 import { useLanguage } from "@/lib/LanguageContext";
+import { type ReactNode } from "react";
+
+const KEYWORDS = [
+  "Staff Engineer",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "AI",
+  "LLM",
+  "PostgreSQL",
+  "Redis",
+  "AWS",
+  "ADRs",
+  "CI/CD",
+];
+
+function highlightKeywords(text: string): ReactNode[] {
+  const pattern = new RegExp(`(${KEYWORDS.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "g");
+  const parts = text.split(pattern);
+  return parts.map((part, i) =>
+    KEYWORDS.includes(part) ? (
+      <span key={i} className="text-text-primary">
+        {part}
+      </span>
+    ) : (
+      <span key={i}>{part}</span>
+    )
+  );
+}
 
 export default function About() {
   const { t } = useLanguage();
@@ -12,7 +41,7 @@ export default function About() {
       </h2>
       {t.about.map((paragraph, index) => (
         <p key={index} className="mb-4 text-sm leading-relaxed">
-          {paragraph}
+          {highlightKeywords(paragraph)}
         </p>
       ))}
     </section>

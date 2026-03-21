@@ -2,20 +2,15 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
-  useState,
   useEffect,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import { translations, type Translations } from "@/lib/i18n";
 
 type Language = "en" | "pt";
-
-function getStoredLanguage(): Language {
-  if (typeof window === "undefined") return "pt";
-  const stored = localStorage.getItem("lang");
-  return stored === "en" || stored === "pt" ? stored : "pt";
-}
 
 interface LanguageContextValue {
   language: Language;
@@ -25,18 +20,37 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+const LANG_KEY = "lang";
+const listeners = new Set<() => void>();
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => {
+    listeners.delete(callback);
+  };
+}
+
+function getSnapshot(): Language {
+  const stored = localStorage.getItem(LANG_KEY);
+  return stored === "en" || stored === "pt" ? stored : "pt";
+}
+
+function getServerSnapshot(): Language {
+  return "pt";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(getStoredLanguage);
+  const language = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
 
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem("lang", lang);
+  const setLanguage = useCallback((lang: Language) => {
+    localStorage.setItem(LANG_KEY, lang);
     document.documentElement.lang = lang;
-  };
+    listeners.forEach((listener) => listener());
+  }, []);
 
   return (
     <LanguageContext value={{ language, setLanguage, t: translations[language] }}>

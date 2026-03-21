@@ -31,7 +31,7 @@ export const translations: Record<"en" | "pt", Translations> = {
     ],
     experience: [
       {
-        date: "2023 — Present",
+        date: "OCT 2023 — PRESENT",
         role: "Founder",
         company: "Wagner Junior LTDA",
         description:
@@ -48,7 +48,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2023 — 2026",
+        date: "OCT 2023 — JAN 2026",
         role: "Fullstack Developer",
         company: "D3",
         location: "Las Vegas, NV, USA",
@@ -65,7 +65,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2021 — 2023",
+        date: "JUL 2021 — OCT 2023",
         role: "Front End Developer",
         company: "Hotmart",
         description:
@@ -83,7 +83,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2019 — 2021",
+        date: "MAY 2019 — JUN 2021",
         role: "Software Engineer",
         company: "Dito CRM",
         location: "Belo Horizonte, BR",
@@ -98,7 +98,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2016 — 2019",
+        date: "NOV 2016 — APR 2019",
         role: "Fullstack Developer",
         company: "Infogest Sistemas",
         location: "Belo Horizonte, BR",
@@ -116,7 +116,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2012 — 2014",
+        date: "JAN 2012 — APR 2014",
         role: "Fullstack Developer",
         company: "EVG Sistemas",
         description:
@@ -141,7 +141,7 @@ export const translations: Record<"en" | "pt", Translations> = {
     ],
     experience: [
       {
-        date: "2023 — Presente",
+        date: "OUT 2023 — PRESENTE",
         role: "Founder",
         company: "Wagner Junior LTDA",
         description:
@@ -158,7 +158,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2023 — 2026",
+        date: "OUT 2023 — JAN 2026",
         role: "Desenvolvedor Fullstack",
         company: "D3",
         location: "Las Vegas, NV, USA",
@@ -175,7 +175,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2021 — 2023",
+        date: "JUL 2021 — OUT 2023",
         role: "Desenvolvedor Front End",
         company: "Hotmart",
         description:
@@ -193,7 +193,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2019 — 2021",
+        date: "MAI 2019 — JUN 2021",
         role: "Engenheiro de Software",
         company: "Dito CRM",
         location: "Belo Horizonte, BR",
@@ -208,7 +208,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2016 — 2019",
+        date: "NOV 2016 — ABR 2019",
         role: "Desenvolvedor Fullstack",
         company: "Infogest Sistemas",
         location: "Belo Horizonte, BR",
@@ -226,7 +226,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         ],
       },
       {
-        date: "2012 — 2014",
+        date: "JAN 2012 — ABR 2014",
         role: "Desenvolvedor Fullstack",
         company: "EVG Sistemas",
         description:

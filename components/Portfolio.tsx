@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { useActiveSection } from "@/lib/useActiveSection";
 import MouseGradient from "./MouseGradient";
@@ -9,18 +9,21 @@ import About from "./About";
 import Experience from "./Experience";
 import Footer from "./Footer";
 
+const SECTION_IDS = ["about", "experience"];
+
 export default function Portfolio() {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const activeSection = useActiveSection(["about", "experience"]);
+  const activeSection = useActiveSection(SECTION_IDS);
+  const rafRef = useRef(0);
 
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
       setMouseX(e.clientX);
       setMouseY(e.clientY);
-    },
-    []
-  );
+    });
+  }, []);
 
   return (
     <LanguageProvider>

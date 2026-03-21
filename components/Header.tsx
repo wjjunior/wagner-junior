@@ -10,7 +10,7 @@ const navItems = [
 ];
 
 export default function Header({ activeSection }: { activeSection: string }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <header className="flex flex-col lg:sticky lg:top-0 lg:h-screen lg:w-[45%] lg:py-24 lg:px-6 py-12 px-6">
@@ -19,7 +19,7 @@ export default function Header({ activeSection }: { activeSection: string }) {
           href="#content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-accent focus:text-bg-primary focus:rounded"
         >
-          Skip to content
+          {language === "pt" ? "Pular para o conteúdo" : "Skip to content"}
         </a>
 
         <h1 className="text-4xl sm:text-5xl font-bold text-text-primary tracking-tight">
