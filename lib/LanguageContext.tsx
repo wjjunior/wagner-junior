@@ -11,6 +11,12 @@ import { translations, type Translations } from "@/lib/i18n";
 
 type Language = "en" | "pt";
 
+function getStoredLanguage(): Language {
+  if (typeof window === "undefined") return "pt";
+  const stored = localStorage.getItem("lang");
+  return stored === "en" || stored === "pt" ? stored : "pt";
+}
+
 interface LanguageContextValue {
   language: Language;
   setLanguage: (lang: Language) => void;
@@ -20,17 +26,11 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("pt");
+  const [language, setLanguageState] = useState<Language>(getStoredLanguage);
 
   useEffect(() => {
-    const stored = localStorage.getItem("lang");
-    if (stored === "en" || stored === "pt") {
-      setLanguageState(stored);
-      document.documentElement.lang = stored;
-    } else {
-      document.documentElement.lang = "pt";
-    }
-  }, []);
+    document.documentElement.lang = language;
+  }, [language]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);

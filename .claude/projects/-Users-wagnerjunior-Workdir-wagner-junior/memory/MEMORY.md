@@ -1,0 +1,1 @@
+- [feedback_no_coauthor_no_docs_commit.md](feedback_no_coauthor_no_docs_commit.md) — No Co-Authored-By in commits, docs/ is gitignored
