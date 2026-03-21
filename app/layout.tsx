@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Wagner Junior | Staff Full Stack Engineer",
   description:
-    "Staff Full Stack Engineer building the future of digital identity, Web3 infrastructure, and AI-powered systems. 14+ years shipping at scale.",
+    "Staff Full Stack Engineer with 14+ years shipping scalable systems end-to-end. TypeScript, React, Node.js, and AI-powered platforms.",
 };
 
 export default function RootLayout({

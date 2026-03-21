@@ -10,8 +10,6 @@ const KEYWORDS = [
   "Node.js",
   "AI",
   "LLM",
-  "D3",
-  "Web3",
   "PostgreSQL",
   "Redis",
   "AWS",

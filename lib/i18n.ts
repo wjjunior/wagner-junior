@@ -33,14 +33,14 @@ export const translations: Record<"en" | "pt", Translations> = {
     header: {
       title: "Wagner Junior",
       subtitle: "Staff Full Stack Engineer",
-      tagline: "Building the infrastructure layer of the decentralized web — from tokenized domains and digital identity to AI-powered systems that ship at scale.",
+      tagline: "I architect and ship scalable systems end-to-end — from high-traffic platforms serving millions to AI-powered products that push what's possible.",
       cta: "Get in touch",
     },
     about: {
       title: "About",
       paragraphs: [
         "I'm a Staff-level Full Stack Engineer with 14+ years of experience building and scaling web applications. I specialize in TypeScript, React, and Node.js — and I ship fast, own systems end-to-end, and obsess over developer experience and product quality.",
-        "Most recently, I led full-stack development at D3, building decentralized identity and tokenized domain solutions — the infrastructure powering the next generation of digital ownership. I shipped production features across React, TypeScript, NestJS, Kafka, GraphQL, and PostgreSQL in a fast-paced Web3 environment.",
+        "I've led full-stack development across diverse domains — from digital identity platforms and event-driven architectures to edtech products serving millions of users globally. I drive architecture decisions, mentor engineers, define technical standards, and ship features with full ownership from design to deployment.",
         "Currently, I operate my own engineering consultancy serving global tech companies at Staff and Senior level. Alongside client work, I'm building a production multi-agent AI orchestration platform — coordinating specialized LLM agents for autonomous task execution, intelligent model routing, and security hardening.",
         "I thrive in high-autonomy, high-velocity environments where engineering decisions directly shape the product. My sweet spot is the intersection of scalable architecture, full-stack TypeScript, and intelligent automation.",
       ],
@@ -60,8 +60,8 @@ export const translations: Record<"en" | "pt", Translations> = {
         company: "D3",
         location: "Las Vegas, NV, USA",
         description:
-          "Led full-stack development of decentralized identity and tokenized domain solutions at D3 — the registrar powering the future of digital ownership. Designed and shipped scalable web applications for blockchain-based digital identity, handling secure authentication flows and tokenized domain management across React, TypeScript, NestJS, Kafka, GraphQL, and PostgreSQL. Drove technical decisions autonomously, defining API contracts, data models, and system integration patterns.",
-        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Blockchain", "Web3"],
+          "Led full-stack development of a digital identity platform, designing and shipping scalable applications with complex authentication flows, event-driven processing, and distributed data management. Built end-to-end features across React, TypeScript, NestJS, Kafka, GraphQL, and PostgreSQL with full ownership from architecture to deployment. Drove technical decisions autonomously, defining API contracts, data models, and system integration patterns.",
+        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Event-Driven"],
       },
       {
         date: "JUL 2021 — OCT 2023",
@@ -109,14 +109,14 @@ export const translations: Record<"en" | "pt", Translations> = {
     header: {
       title: "Wagner Junior",
       subtitle: "Staff Full Stack Engineer",
-      tagline: "Construindo a camada de infraestrutura da web descentralizada — de domínios tokenizados e identidade digital a sistemas potencializados por IA que entregam em escala.",
+      tagline: "Arquiteto e entrego sistemas escaláveis de ponta a ponta — de plataformas de alto tráfego servindo milhões a produtos potencializados por IA que expandem o que é possível.",
       cta: "Entre em contato",
     },
     about: {
       title: "Sobre",
       paragraphs: [
         "Sou Engenheiro Full Stack nível Staff com mais de 14 anos de experiência construindo e escalando aplicações web. Minha especialidade é TypeScript, React e Node.js — entrego rápido, sou dono dos sistemas de ponta a ponta e sou obcecado por experiência do desenvolvedor e qualidade do produto.",
-        "Mais recentemente, liderei o desenvolvimento full-stack na D3, construindo soluções de identidade descentralizada e domínios tokenizados — a infraestrutura que potencializa a próxima geração de propriedade digital. Entreguei funcionalidades em produção com React, TypeScript, NestJS, Kafka, GraphQL e PostgreSQL em um ambiente Web3 de ritmo acelerado.",
+        "Liderei o desenvolvimento full-stack em domínios diversos — de plataformas de identidade digital e arquiteturas orientadas a eventos a produtos edtech servindo milhões de usuários globalmente. Conduzo decisões de arquitetura, mentoro engenheiros, defino padrões técnicos e entrego funcionalidades com total ownership do design ao deploy.",
         "Atualmente, opero minha própria consultoria de engenharia atendendo empresas de tecnologia globais em nível Staff e Senior. Paralelamente, estou construindo uma plataforma de orquestração multi-agente de IA em produção — coordenando agentes LLM especializados para execução autônoma de tarefas, roteamento inteligente de modelos e hardening de segurança.",
         "Prospero em ambientes de alta autonomia e alta velocidade, onde decisões de engenharia moldam diretamente o produto. Meu ponto forte é a interseção entre arquitetura escalável, TypeScript full-stack e automação inteligente.",
       ],
@@ -136,8 +136,8 @@ export const translations: Record<"en" | "pt", Translations> = {
         company: "D3",
         location: "Las Vegas, NV, USA",
         description:
-          "Liderei o desenvolvimento full-stack de soluções de identidade descentralizada e domínios tokenizados na D3 — a registradora que potencializa o futuro da propriedade digital. Projetei e entreguei aplicações web escaláveis para identidade digital baseada em blockchain, gerenciando fluxos de autenticação segura e domínios tokenizados com React, TypeScript, NestJS, Kafka, GraphQL e PostgreSQL. Conduzi decisões técnicas com autonomia, definindo contratos de API, modelos de dados e padrões de integração.",
-        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Blockchain", "Web3"],
+          "Liderei o desenvolvimento full-stack de uma plataforma de identidade digital, projetando e entregando aplicações escaláveis com fluxos complexos de autenticação, processamento orientado a eventos e gerenciamento de dados distribuídos. Construí funcionalidades de ponta a ponta com React, TypeScript, NestJS, Kafka, GraphQL e PostgreSQL com total ownership da arquitetura ao deploy. Conduzi decisões técnicas com autonomia, definindo contratos de API, modelos de dados e padrões de integração.",
+        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Event-Driven"],
       },
       {
         date: "JUL 2021 — OUT 2023",
