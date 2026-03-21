@@ -4,6 +4,7 @@ interface ExperienceCardProps {
   date: string;
   role: string;
   company: string;
+  companyUrl?: string;
   location?: string;
   description: string;
   tags: string[];
@@ -13,10 +14,24 @@ export default function ExperienceCard({
   date,
   role,
   company,
+  companyUrl,
   location,
   description,
   tags,
 }: ExperienceCardProps) {
+  const companyElement = companyUrl ? (
+    <a
+      href={companyUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-accent font-medium group-hover:text-accent-light transition-colors duration-300 hover:underline underline-offset-2"
+    >
+      {company}
+    </a>
+  ) : (
+    <span className="text-accent font-medium group-hover:text-accent-light transition-colors duration-300">{company}</span>
+  );
+
   return (
     <div className="group glass-card rounded-xl p-6 transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
@@ -24,7 +39,7 @@ export default function ExperienceCard({
           <h3 className="font-semibold transition-colors duration-300">
             <span className="text-accent-light group-hover:text-accent">{role}</span>
             <span className="text-text-muted font-normal"> · </span>
-            <span className="text-accent font-medium group-hover:text-accent-light">{company}</span>
+            {companyElement}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

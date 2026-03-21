@@ -21,6 +21,7 @@ export default function Experience() {
             date={entry.date}
             role={entry.role}
             company={entry.company}
+            companyUrl={entry.companyUrl}
             location={entry.location}
             description={entry.description}
             tags={entry.tags}

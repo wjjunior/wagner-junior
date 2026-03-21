@@ -82,6 +82,28 @@ html[data-theme="light"] .glass-card:hover {
   box-shadow: 0 8px 30px rgba(232, 0, 112, 0.1), 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
+html[data-theme="light"] header {
+  background: rgba(232, 0, 112, 0.95) !important;
+  border-color: rgba(180, 0, 85, 0.3) !important;
+}
+
+html[data-theme="light"] header a,
+html[data-theme="light"] header button,
+html[data-theme="light"] header span,
+html[data-theme="light"] header nav a {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+html[data-theme="light"] header a:hover,
+html[data-theme="light"] header button:hover,
+html[data-theme="light"] header nav a:hover {
+  color: #fff !important;
+}
+
+html[data-theme="light"] header .w-px {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
