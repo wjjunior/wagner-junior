@@ -14,10 +14,10 @@ export default function Header({ activeSection }: { activeSection: string }) {
   const { t, language } = useLanguage();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-bg-primary/80 backdrop-blur-xl transition-colors duration-300">
+    <header className="site-header fixed top-0 left-0 right-0 z-50 backdrop-blur-xl transition-colors duration-300">
       <div className="mx-auto max-w-6xl px-6 md:px-12">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-text-primary font-bold tracking-tight text-lg hover:text-accent-light transition-colors">
+          <a href="#" className="font-bold tracking-tight text-lg transition-colors">
             WJ
           </a>
 
@@ -29,9 +29,7 @@ export default function Header({ activeSection }: { activeSection: string }) {
                   key={id}
                   href={`#${id}`}
                   className={`text-sm font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
-                    isActive
-                      ? "text-text-primary"
-                      : "text-text-muted hover:text-text-secondary"
+                    isActive ? "opacity-100" : "opacity-70 hover:opacity-100"
                   }`}
                 >
                   {t.nav[key]}
@@ -42,9 +40,9 @@ export default function Header({ activeSection }: { activeSection: string }) {
 
           <div className="flex items-center gap-3">
             <SocialLinks />
-            <div className="w-px h-5 bg-border" />
+            <div className="header-divider w-px h-5" />
             <ThemeToggle />
-            <div className="w-px h-5 bg-border" />
+            <div className="header-divider w-px h-5" />
             <LanguageToggle />
           </div>
         </div>

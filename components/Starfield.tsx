@@ -16,6 +16,11 @@ interface Star {
 export default function Starfield() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { theme } = useTheme();
+  const themeRef = useRef(theme);
+
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -23,6 +28,8 @@ export default function Starfield() {
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let animationId: number;
     let stars: Star[] = [];
@@ -48,11 +55,27 @@ export default function Starfield() {
       }));
     }
 
+    function drawStatic() {
+      if (!canvas || !ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const isLight = themeRef.current === "light";
+      const baseAlpha = isLight ? 0.15 : 1;
+      const color = isLight ? "232, 0, 112" : "200, 200, 240";
+
+      for (const star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color}, ${star.opacity * 0.7 * baseAlpha})`;
+        ctx.fill();
+      }
+    }
+
     function draw(time: number) {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const isLight = theme === "light";
+      const isLight = themeRef.current === "light";
       const baseAlpha = isLight ? 0.15 : 1;
       const color = isLight ? "232, 0, 112" : "200, 200, 240";
 
@@ -76,14 +99,20 @@ export default function Starfield() {
     }
 
     resize();
-    animationId = requestAnimationFrame(draw);
+
+    if (reducedMotion) {
+      drawStatic();
+    } else {
+      animationId = requestAnimationFrame(draw);
+    }
+
     window.addEventListener("resize", resize);
 
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
-  }, [theme]);
+  }, []);
 
   return (
     <canvas
