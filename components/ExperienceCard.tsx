@@ -21,10 +21,10 @@ export default function ExperienceCard({
     <div className="group glass-card rounded-xl p-6 transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
         <div>
-          <h3 className="text-text-primary font-semibold group-hover:text-accent-light transition-colors duration-300">
-            {role}
+          <h3 className="font-semibold transition-colors duration-300">
+            <span className="text-accent-light group-hover:text-accent">{role}</span>
             <span className="text-text-muted font-normal"> · </span>
-            <span className="text-accent-light group-hover:text-accent transition-colors duration-300">{company}</span>
+            <span className="text-accent font-medium group-hover:text-accent-light">{company}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

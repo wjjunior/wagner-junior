@@ -26,7 +26,7 @@ function highlightKeywords(text: string): ReactNode[] {
   const parts = text.split(pattern);
   return parts.map((part, i) =>
     KEYWORDS.includes(part) ? (
-      <span key={i} className="text-text-primary font-medium">
+      <span key={i} className="text-accent-light font-medium">
         {part}
       </span>
     ) : (

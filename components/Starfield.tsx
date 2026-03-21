@@ -53,8 +53,8 @@ export default function Starfield() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const isLight = theme === "light";
-      const baseAlpha = isLight ? 0.12 : 1;
-      const color = isLight ? "120, 100, 180" : "200, 200, 240";
+      const baseAlpha = isLight ? 0.15 : 1;
+      const color = isLight ? "232, 0, 112" : "200, 200, 240";
 
       for (const star of stars) {
         star.y -= star.speed;
