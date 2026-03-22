@@ -42,6 +42,10 @@ export default function Header({ activeSection }: { activeSection: string }) {
                 <a
                   key={id}
                   href={`#${id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+                  }}
                   className={`text-sm font-medium transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 ${
                     isActive ? "opacity-100" : "opacity-70 hover:opacity-100"
                   }`}
