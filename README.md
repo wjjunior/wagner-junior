@@ -1,4 +1,4 @@
-# wagner-junior.dev
+# wagnerjunior.dev
 
 Personal portfolio website for Wagner Junior — Staff Full Stack Engineer with 14+ years of experience building scalable systems in TypeScript, React, and Node.js.
 

@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     "software architect",
     "Wagner Junior",
   ],
-  authors: [{ name: "Wagner Junior", url: "https://wagner-junior.dev" }],
+  authors: [{ name: "Wagner Junior", url: "https://wagnerjunior.dev" }],
   creator: "Wagner Junior",
-  metadataBase: new URL("https://wagner-junior.dev"),
+  metadataBase: new URL("https://wagnerjunior.dev"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://wagner-junior.dev",
+    url: "https://wagnerjunior.dev",
     siteName: "Wagner Junior",
     title: "Wagner Junior | Staff Full Stack Engineer",
     description:

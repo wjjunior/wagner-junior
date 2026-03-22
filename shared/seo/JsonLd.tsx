@@ -6,7 +6,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Wagner Junior",
-  url: "https://wagner-junior.dev",
+  url: "https://wagnerjunior.dev",
   email: "wagner.junior30@gmail.com",
   jobTitle: "Staff Full Stack Engineer",
   description: t.header.tagline,
@@ -46,7 +46,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Wagner Junior",
-  url: "https://wagner-junior.dev",
+  url: "https://wagnerjunior.dev",
   description:
     "Personal portfolio of Wagner Junior — Staff Full Stack Engineer with 14+ years of experience.",
   author: {

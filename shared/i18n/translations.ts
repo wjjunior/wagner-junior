@@ -26,7 +26,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         date: "OCT 2023 — PRESENT",
         role: "Founder & Staff Engineer",
         company: "Wagner Junior LTDA",
-        companyUrl: "https://wagner-junior.dev",
+        companyUrl: "https://wagnerjunior.dev",
         description:
           "Software engineering consultancy serving multiple global tech companies as a dedicated contractor, operating at Staff and Senior level with full technical autonomy. Leading full-stack architecture across React, TypeScript, Node.js, PostgreSQL, Redis, and AWS. Building and operating a production multi-agent AI platform on OpenClaw, orchestrating specialized LLM agents for marketing automation, content generation, and SaaS operations.",
         tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "AI/LLM", "OpenClaw"],
@@ -112,7 +112,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         date: "OUT 2023 — PRESENTE",
         role: "Founder & Staff Engineer",
         company: "Wagner Junior LTDA",
-        companyUrl: "https://wagner-junior.dev",
+        companyUrl: "https://wagnerjunior.dev",
         description:
           "Consultoria de engenharia de software atendendo múltiplas empresas de tecnologia globais como contratado dedicado, operando em nível Staff e Senior com total autonomia técnica. Liderança técnica full-stack em React, TypeScript, Node.js, PostgreSQL, Redis e AWS. Construindo e operando uma plataforma multi-agente de IA em produção com OpenClaw, orquestrando agentes LLM especializados para automação de marketing, geração de conteúdo e operações SaaS.",
         tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "AI/LLM", "OpenClaw"],
