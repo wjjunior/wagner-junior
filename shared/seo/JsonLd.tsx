@@ -39,7 +39,6 @@ const personSchema = {
   worksFor: {
     "@type": "Organization",
     name: "Wagner Junior LTDA",
-    url: "https://wagner-junior.dev",
   },
 };
 

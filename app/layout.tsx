@@ -36,7 +36,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    alternateLocale: "pt_BR",
     url: "https://wagner-junior.dev",
     siteName: "Wagner Junior",
     title: "Wagner Junior | Staff Full Stack Engineer",

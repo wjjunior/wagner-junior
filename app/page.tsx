@@ -7,21 +7,22 @@ export default function Home() {
   return (
     <>
       <Portfolio />
-      <div className="sr-only" aria-hidden="true">
-        <h1>Wagner Junior — Staff Full Stack Engineer</h1>
+      {/* Server-rendered content for search engine indexability. Visually hidden, aria-hidden to avoid screen reader duplication. */}
+      <div className="absolute overflow-hidden w-px h-px -m-px p-0 border-0 [clip:rect(0,0,0,0)]" aria-hidden="true">
+        <h2>Wagner Junior — Staff Full Stack Engineer</h2>
         <p>{t.header.tagline}</p>
 
-        <h2>{t.about.title}</h2>
+        <h3>{t.about.title}</h3>
         {t.about.paragraphs.map((p) => (
           <p key={p.slice(0, 30)}>{p}</p>
         ))}
 
-        <h2>Experience</h2>
+        <h3>Experience</h3>
         {t.experience.map((entry) => (
           <article key={`${entry.company}-${entry.date}`}>
-            <h3>
+            <h4>
               {entry.role} — {entry.company}
-            </h3>
+            </h4>
             {entry.location && <p>{entry.location}</p>}
             <p>{entry.date}</p>
             <p>{entry.description}</p>
@@ -33,13 +34,8 @@ export default function Home() {
           </article>
         ))}
 
-        <h2>Contact</h2>
+        <h3>Contact</h3>
         <p>Email: {t.footer.email}</p>
-        <p>
-          Staff Full Stack Engineer available for staff engineer and senior
-          fullstack developer positions. 14+ years of experience in TypeScript,
-          React, Node.js, PostgreSQL, AWS, and AI-powered systems.
-        </p>
       </div>
     </>
   );
