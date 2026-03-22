@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# wagner-junior.dev
+
+Personal portfolio website for Wagner Junior — Staff Full Stack Engineer with 14+ years of experience building scalable systems in TypeScript, React, and Node.js.
+
+## Features
+
+- Dark and light themes with smooth transitions
+- Bilingual support (English / Portuguese) with localStorage persistence
+- Animated starfield canvas background
+- Mouse-following gradient effect
+- Glass-morphism experience cards with hover animations
+- Responsive layout with sticky top navigation
+- Accessible (skip-to-content, aria labels, focus-visible, prefers-reduced-motion)
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [TypeScript 5](https://www.typescriptlang.org/)
+- [Tailwind CSS 4](https://tailwindcss.com/)
+- [Lucide React](https://lucide.dev/) (icons)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+The project follows an FSD-like (Feature-Sliced Design) architecture:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app/                → Next.js app router (layout, page, styles)
+shared/
+  ui/               → Reusable UI primitives (SectionHeader, LinkButton, icons)
+  hooks/            → Custom hooks (useActiveSection)
+  providers/        → Context providers (Theme, Language, AppProviders)
+  i18n/             → Translations and type definitions
+features/
+  theme/            → Theme toggle component
+  language/         → Language toggle component
+widgets/            → Composed section-level components
+  Portfolio.tsx     → Root orchestrator
+  Header.tsx        → Sticky navigation bar
+  Hero.tsx          → Hero section with gradient text
+  About.tsx         → About section with keyword highlighting
+  Experience.tsx    → Experience timeline
+  Footer.tsx        → CTA footer
+  Starfield.tsx     → Canvas starfield animation
+  MouseGradient.tsx → Cursor-following gradient
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+Deploy with [Vercel](https://vercel.com/):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The site is statically generated and requires no server-side runtime.
+
+## License
+
+Private project. All rights reserved.
