@@ -88,6 +88,12 @@ export const translations: Record<"en" | "pt", Translations> = {
     theme: {
       switchToLight: "Switch to light mode",
       switchToDark: "Switch to dark mode",
+      switchedToLight: "Switched to light mode",
+      switchedToDark: "Switched to dark mode",
+    },
+    a11y: {
+      opensInNewTab: "(opens in new tab)",
+      switchedToLanguage: "Switched to English",
     },
   },
   pt: {
@@ -174,6 +180,12 @@ export const translations: Record<"en" | "pt", Translations> = {
     theme: {
       switchToLight: "Mudar para modo claro",
       switchToDark: "Mudar para modo escuro",
+      switchedToLight: "Mudou para modo claro",
+      switchedToDark: "Mudou para modo escuro",
+    },
+    a11y: {
+      opensInNewTab: "(abre em nova aba)",
+      switchedToLanguage: "Idioma alterado para Português",
     },
   },
 };

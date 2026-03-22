@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/shared/providers/LanguageProvider";
 import type { ExperienceEntry } from "@/shared/i18n/types";
 
 export default function ExperienceCard({
@@ -12,15 +13,18 @@ export default function ExperienceCard({
   description,
   tags,
 }: ExperienceEntry) {
+  const { t } = useLanguage();
+
   const companyElement = companyUrl ? (
     <a
       href={companyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-accent font-medium group-hover:text-accent-light transition-colors duration-300 hover:underline underline-offset-2"
+      aria-label={`${company} ${t.a11y.opensInNewTab}`}
+      className="text-accent font-medium group-hover:text-accent-light transition-colors duration-300 hover:underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
     >
       {company}
-      <ArrowUpRight className="inline-block ml-1 w-3.5 h-3.5 opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0" />
+      <ArrowUpRight aria-hidden="true" className="inline-block ml-1 w-3.5 h-3.5 opacity-0 -translate-y-1 translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0" />
     </a>
   ) : (
     <span className="text-accent font-medium group-hover:text-accent-light transition-colors duration-300">
@@ -29,7 +33,7 @@ export default function ExperienceCard({
   );
 
   return (
-    <div className="group glass-card rounded-xl p-4 sm:p-6 transition-all duration-300">
+    <article className="group glass-card rounded-xl p-4 sm:p-6 transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
         <div>
           <h3 className="font-semibold transition-colors duration-300">
@@ -55,6 +59,6 @@ export default function ExperienceCard({
           </li>
         ))}
       </ul>
-    </div>
+    </article>
   );
 }

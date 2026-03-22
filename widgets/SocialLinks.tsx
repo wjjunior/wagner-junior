@@ -2,17 +2,20 @@
 
 import { GitHubIcon, LinkedInIcon } from "@/shared/ui/icons";
 import { Mail } from "lucide-react";
+import { useLanguage } from "@/shared/providers/LanguageProvider";
 
 const linkClass =
   "text-text-muted hover:text-accent-light transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2";
 
 export default function SocialLinks() {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-row gap-5">
-      <a href="https://github.com/wjjunior" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className={linkClass}>
+      <a href="https://github.com/wjjunior" target="_blank" rel="noopener noreferrer" aria-label={`GitHub ${t.a11y.opensInNewTab}`} className={linkClass}>
         <GitHubIcon size={20} />
       </a>
-      <a href="https://www.linkedin.com/in/wagner-j-junior/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={linkClass}>
+      <a href="https://www.linkedin.com/in/wagner-j-junior/" target="_blank" rel="noopener noreferrer" aria-label={`LinkedIn ${t.a11y.opensInNewTab}`} className={linkClass}>
         <LinkedInIcon size={20} />
       </a>
       <a href="mailto:wagner.junior30@gmail.com" aria-label="Email" className={linkClass}>

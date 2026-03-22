@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <Portfolio />
-      {/* Server-rendered content for search engine indexability. Visually hidden, aria-hidden to avoid screen reader duplication. */}
       <div className="absolute overflow-hidden w-px h-px -m-px p-0 border-0 [clip:rect(0,0,0,0)]" aria-hidden="true">
         <h2>Wagner Junior — Staff Full Stack Engineer</h2>
         <p>{t.header.tagline}</p>

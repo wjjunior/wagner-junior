@@ -22,18 +22,19 @@ Single-page app with bilingual support (EN/PT), dark/light themes, and animated 
 ## Architecture (FSD-like)
 
 ```
-app/              → Next.js app router (layout, page, globals.css)
+app/              → Next.js app router (layout, page, globals.css, opengraph-image, twitter-image)
 shared/
-  ui/             → Reusable UI primitives (SectionHeader, LinkButton, icons/)
+  ui/             → Reusable UI primitives (SectionHeader, LinkButton, LiveAnnouncer, icons/)
   hooks/          → Custom hooks (useActiveSection)
   providers/      → Context providers (ThemeProvider, LanguageProvider, AppProviders)
   i18n/           → Translation data (translations.ts) and types (types.ts)
+  seo/            → JSON-LD structured data (JsonLd.tsx)
 features/
   theme/          → ThemeToggle (user-facing theme interaction)
   language/       → LanguageToggle (user-facing language interaction)
 widgets/          → Section-level composed components
   Portfolio.tsx   → Root orchestrator (providers, mouse tracking, layout)
-  Header.tsx      → Sticky top navigation bar
+  Header.tsx      → Sticky top navigation bar with mobile hamburger menu
   Hero.tsx        → Full-viewport hero section
   About.tsx       → About section with keyword highlighting
   Experience.tsx  → Experience section
@@ -57,7 +58,7 @@ widgets/          → Section-level composed components
 
 - TypeScript strict mode. No `any`, no `@ts-ignore`.
 - All text content must go through `shared/i18n/translations.ts` — no hardcoded user-facing strings in components.
-- Prefer Tailwind utility classes. Only use inline `style={}` for truly dynamic values (e.g., mouse coordinates).
+- Prefer Tailwind utility classes. Only use inline `style={}` for truly dynamic values (e.g., mouse coordinates) and `next/og` image generation (Satori only supports inline styles).
 - Use `lucide-react` for icons. Import directly from `"lucide-react"`, or use custom icons in `shared/ui/icons/`.
 - Use `@/` path alias for all imports. No relative paths.
 
@@ -68,6 +69,8 @@ widgets/          → Section-level composed components
 - Context values must be wrapped in `useMemo` to avoid unnecessary re-renders.
 - Every interactive element needs `focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2`.
 - Every icon needs `aria-hidden="true"`. Icon-only buttons/links need `aria-label`.
+- External links (`target="_blank"`) must include `(opens in new tab)` in their `aria-label`.
+- State changes visible to users (theme, language) must announce via `LiveAnnouncer` (`aria-live="polite"`).
 
 ### Theming
 

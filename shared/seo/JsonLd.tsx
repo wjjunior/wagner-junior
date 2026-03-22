@@ -26,25 +26,20 @@ const personSchema = {
     "https://github.com/wjjunior",
     "https://www.linkedin.com/in/wagner-j-junior/",
   ],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Belo Horizonte",
-    addressRegion: "MG",
-    addressCountry: "BR",
-  },
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "FUMEC",
+  workLocation: {
+    "@type": "Place",
+    name: "Remote",
   },
   worksFor: {
     "@type": "Organization",
-    name: "Wagner Junior LTDA",
+    name: "Wagner Junior Engineering",
   },
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  inLanguage: "en",
   name: "Wagner Junior",
   url: "https://wagnerjunior.dev",
   description:

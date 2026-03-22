@@ -29,5 +29,11 @@ export interface Translations {
   theme: {
     switchToLight: string;
     switchToDark: string;
+    switchedToLight: string;
+    switchedToDark: string;
+  };
+  a11y: {
+    opensInNewTab: string;
+    switchedToLanguage: string;
   };
 }

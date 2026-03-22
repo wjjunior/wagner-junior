@@ -9,8 +9,9 @@ Personal portfolio website for Wagner Junior — Staff Full Stack Engineer with 
 - Animated starfield canvas background
 - Mouse-following gradient effect
 - Glass-morphism experience cards with hover animations
-- Responsive layout with sticky top navigation
-- Accessible (skip-to-content, aria labels, focus-visible, prefers-reduced-motion)
+- Responsive layout with sticky navigation and mobile hamburger menu
+- Accessible (skip-to-content, aria labels, focus-visible, live announcements, prefers-reduced-motion)
+- SEO optimized (Open Graph image, Twitter card, JSON-LD structured data, sitemap, robots.txt)
 
 ## Tech Stack
 
@@ -43,18 +44,19 @@ Open [http://localhost:3000](http://localhost:3000).
 The project follows an FSD-like (Feature-Sliced Design) architecture:
 
 ```
-app/                → Next.js app router (layout, page, styles)
+app/                → Next.js app router (layout, page, styles, OG/Twitter images)
 shared/
-  ui/               → Reusable UI primitives (SectionHeader, LinkButton, icons)
+  ui/               → Reusable UI primitives (SectionHeader, LinkButton, LiveAnnouncer, icons)
   hooks/            → Custom hooks (useActiveSection)
   providers/        → Context providers (Theme, Language, AppProviders)
   i18n/             → Translations and type definitions
+  seo/              → JSON-LD structured data
 features/
   theme/            → Theme toggle component
   language/         → Language toggle component
 widgets/            → Composed section-level components
   Portfolio.tsx     → Root orchestrator
-  Header.tsx        → Sticky navigation bar
+  Header.tsx        → Sticky navigation bar with mobile menu
   Hero.tsx          → Hero section with gradient text
   About.tsx         → About section with keyword highlighting
   Experience.tsx    → Experience timeline

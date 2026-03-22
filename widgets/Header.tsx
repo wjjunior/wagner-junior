@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/shared/providers/LanguageProvider";
@@ -16,6 +16,9 @@ const navItems = [
 export default function Header({ activeSection }: { activeSection: string }) {
   const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMenuItemRef = useRef<HTMLAnchorElement>(null);
+  const hasInteracted = useRef(false);
 
   const handleNavClick = useCallback(
     (id: string) => {
@@ -24,6 +27,16 @@ export default function Header({ activeSection }: { activeSection: string }) {
     },
     []
   );
+
+  useEffect(() => {
+    if (!hasInteracted.current) return;
+
+    if (mobileMenuOpen) {
+      firstMenuItemRef.current?.focus();
+    } else {
+      menuButtonRef.current?.focus();
+    }
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -88,8 +101,12 @@ export default function Header({ activeSection }: { activeSection: string }) {
             <div className="header-divider w-px h-5" />
             <LanguageToggle />
             <button
+              ref={menuButtonRef}
               type="button"
-              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              onClick={() => {
+                hasInteracted.current = true;
+                setMobileMenuOpen((prev) => !prev);
+              }}
               className="md:hidden ml-2 p-2 -mr-2 transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
               aria-label={mobileMenuOpen ? t.nav.closeMenu : t.nav.menu}
               aria-expanded={mobileMenuOpen}
@@ -110,16 +127,17 @@ export default function Header({ activeSection }: { activeSection: string }) {
             type="button"
             className="fixed inset-0 z-[-1] md:hidden cursor-default"
             onClick={() => setMobileMenuOpen(false)}
-            aria-label={t.nav.closeMenu}
+            aria-hidden="true"
             tabIndex={-1}
           />
           <nav aria-label="Mobile" className="md:hidden border-t border-border/20">
             <div className="mx-auto max-w-6xl px-4 sm:px-6 py-4 flex flex-col gap-3">
-              {navItems.map(({ id, key }) => {
+              {navItems.map(({ id, key }, index) => {
                 const isActive = activeSection === id;
                 return (
                   <a
                     key={id}
+                    ref={index === 0 ? firstMenuItemRef : undefined}
                     href={`#${id}`}
                     onClick={(e) => {
                       e.preventDefault();
