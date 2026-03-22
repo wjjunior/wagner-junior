@@ -9,9 +9,9 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-border pt-16 pb-12">
+    <footer className="border-t border-border pt-12 sm:pt-16 pb-8 sm:pb-12">
       <div className="text-center">
-        <p className="text-2xl sm:text-3xl font-bold text-gradient mb-6">
+        <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient mb-4 sm:mb-6">
           {t.footer.cta}
         </p>
         <LinkButton href={`mailto:${t.footer.email}`}>

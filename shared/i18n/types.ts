@@ -9,7 +9,7 @@ export interface ExperienceEntry {
 }
 
 export interface Translations {
-  nav: { about: string; experience: string };
+  nav: { about: string; experience: string; menu: string; closeMenu: string; skipToContent: string };
   header: {
     title: string;
     subtitle: string;

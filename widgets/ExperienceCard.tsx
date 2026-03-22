@@ -29,7 +29,7 @@ export default function ExperienceCard({
   );
 
   return (
-    <div className="group glass-card rounded-xl p-6 transition-all duration-300">
+    <div className="group glass-card rounded-xl p-4 sm:p-6 transition-all duration-300">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
         <div>
           <h3 className="font-semibold transition-colors duration-300">
@@ -46,10 +46,10 @@ export default function ExperienceCard({
         </span>
       </div>
       <p className="text-sm leading-relaxed text-text-secondary">{description}</p>
-      <ul className="mt-4 flex flex-wrap gap-2">
+      <ul className="mt-3 sm:mt-4 flex flex-wrap gap-1.5 sm:gap-2">
         {tags.map((tag) => (
           <li key={tag}>
-            <span className="rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-xs font-medium text-accent-light">
+            <span className="rounded-full border border-accent/20 bg-accent/5 px-2.5 py-0.5 sm:px-3 sm:py-1 text-xs font-medium text-accent-light">
               {tag}
             </span>
           </li>

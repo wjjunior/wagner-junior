@@ -5,7 +5,7 @@ export type { ExperienceEntry } from "./types";
 
 export const translations: Record<"en" | "pt", Translations> = {
   en: {
-    nav: { about: "About", experience: "Experience" },
+    nav: { about: "About", experience: "Experience", menu: "Open menu", closeMenu: "Close menu", skipToContent: "Skip to content" },
     header: {
       title: "Wagner Junior",
       subtitle: "Staff Full Stack Engineer",
@@ -91,7 +91,7 @@ export const translations: Record<"en" | "pt", Translations> = {
     },
   },
   pt: {
-    nav: { about: "Sobre", experience: "Experiência" },
+    nav: { about: "Sobre", experience: "Experiência", menu: "Abrir menu", closeMenu: "Fechar menu", skipToContent: "Pular para o conteúdo" },
     header: {
       title: "Wagner Junior",
       subtitle: "Staff Full Stack Engineer",

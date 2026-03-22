@@ -19,9 +19,9 @@ function PortfolioContent() {
   return (
     <>
       <Header activeSection={activeSection} />
-      <main id="content" className="mx-auto max-w-4xl px-6 md:px-12">
+      <main id="content" className="mx-auto max-w-4xl px-4 sm:px-6 md:px-12">
         <Hero />
-        <div className="space-y-24 pb-24">
+        <div className="space-y-16 sm:space-y-24 pb-16 sm:pb-24">
           <About />
           <Experience />
         </div>
