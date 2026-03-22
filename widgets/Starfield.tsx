@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useTheme } from "@/lib/ThemeContext";
+import { useTheme } from "@/shared/providers/ThemeProvider";
 
 interface Star {
   x: number;
@@ -29,15 +29,15 @@ export default function Starfield() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = globalThis.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let animationId: number;
     let stars: Star[] = [];
 
     function resize() {
       if (!canvas) return;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = globalThis.innerWidth;
+      canvas.height = globalThis.innerHeight;
       initStars();
     }
 
@@ -106,19 +106,17 @@ export default function Starfield() {
       animationId = requestAnimationFrame(draw);
     }
 
-    window.addEventListener("resize", resize);
+    globalThis.addEventListener("resize", resize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener("resize", resize);
+      globalThis.removeEventListener("resize", resize);
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0"
-      aria-hidden="true"
-    />
+    <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
+      <canvas ref={canvasRef} className="block h-full w-full" />
+    </div>
   );
 }

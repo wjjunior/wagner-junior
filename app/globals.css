@@ -13,6 +13,9 @@
   --color-header-text: inherit;
   --color-header-text-hover: inherit;
   --color-header-divider: rgba(255, 255, 255, 0.08);
+  --color-glow-top: rgba(124, 58, 237, 0.08);
+  --color-glow-bottom: rgba(34, 211, 238, 0.05);
+  --color-glow-cursor: rgba(124, 58, 237, 0.12);
   --font-sans: var(--font-inter);
 }
 
@@ -37,6 +40,9 @@ html[data-theme="light"] {
   --color-header-text: rgba(255, 255, 255, 0.95);
   --color-header-text-hover: #fff;
   --color-header-divider: rgba(255, 255, 255, 0.25);
+  --color-glow-top: rgba(232, 0, 112, 0.04);
+  --color-glow-bottom: rgba(232, 0, 112, 0.03);
+  --color-glow-cursor: rgba(232, 0, 112, 0.06);
 }
 
 html[data-theme="light"] body {
@@ -49,13 +55,6 @@ html[data-theme="light"] body {
 
 html[data-theme="light"] .text-gradient {
   background: linear-gradient(135deg, #1a0a14 0%, #E80070 50%, #b8005a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-html[data-theme="light"] .text-gradient-subtle {
-  background: linear-gradient(135deg, #1a0a14 0%, #E80070 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -149,13 +148,6 @@ html[data-theme="light"] .glass-card:hover {
   background-clip: text;
 }
 
-.text-gradient-subtle {
-  background: linear-gradient(135deg, #f0f0f0 0%, #a78bfa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .glass-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -166,4 +158,12 @@ html[data-theme="light"] .glass-card:hover {
   background: rgba(124, 58, 237, 0.06);
   border-color: rgba(124, 58, 237, 0.2);
   box-shadow: 0 0 30px rgba(124, 58, 237, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glow-orb-top {
+  background: radial-gradient(ellipse at center, var(--color-glow-top) 0%, transparent 70%);
+}
+
+.glow-orb-bottom {
+  background: radial-gradient(ellipse at center, var(--color-glow-bottom) 0%, transparent 70%);
 }

@@ -1,32 +1,7 @@
-interface ExperienceEntry {
-  date: string;
-  role: string;
-  company: string;
-  companyUrl?: string;
-  location?: string;
-  description: string;
-  tags: string[];
-}
+import type { Translations } from "./types";
 
-export interface Translations {
-  nav: { about: string; experience: string };
-  header: {
-    title: string;
-    subtitle: string;
-    tagline: string;
-    cta: string;
-  };
-  about: {
-    title: string;
-    paragraphs: string[];
-  };
-  experience: ExperienceEntry[];
-  footer: {
-    cta: string;
-    email: string;
-    built: string;
-  };
-}
+export type { Translations } from "./types";
+export type { ExperienceEntry } from "./types";
 
 export const translations: Record<"en" | "pt", Translations> = {
   en: {
@@ -110,6 +85,10 @@ export const translations: Record<"en" | "pt", Translations> = {
       email: "wagner.junior30@gmail.com",
       built: "Designed and engineered by Wagner Junior. Built with Next.js and Tailwind CSS.",
     },
+    theme: {
+      switchToLight: "Switch to light mode",
+      switchToDark: "Switch to dark mode",
+    },
   },
   pt: {
     nav: { about: "Sobre", experience: "Experiência" },
@@ -191,6 +170,10 @@ export const translations: Record<"en" | "pt", Translations> = {
       cta: "Vamos construir algo extraordinário.",
       email: "wagner.junior30@gmail.com",
       built: "Projetado e desenvolvido por Wagner Junior. Construído com Next.js e Tailwind CSS.",
+    },
+    theme: {
+      switchToLight: "Mudar para modo claro",
+      switchToDark: "Mudar para modo escuro",
     },
   },
 };

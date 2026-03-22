@@ -5,10 +5,11 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
-import { translations, type Translations } from "@/lib/i18n";
+import { translations, type Translations } from "@/shared/i18n/translations";
 
 type Language = "en" | "pt";
 
@@ -52,8 +53,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     listeners.forEach((listener) => listener());
   }, []);
 
+  const value = useMemo(
+    () => ({ language, setLanguage, t: translations[language] }),
+    [language, setLanguage]
+  );
+
   return (
-    <LanguageContext value={{ language, setLanguage, t: translations[language] }}>
+    <LanguageContext value={value}>
       {children}
     </LanguageContext>
   );

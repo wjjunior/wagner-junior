@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
@@ -38,7 +39,7 @@ function getServerSnapshot(): Theme {
 }
 
 function applyTheme(theme: Theme) {
-  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.dataset.theme = theme;
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
@@ -55,8 +56,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     themeListeners.forEach((listener) => listener());
   }, []);
 
+  const value = useMemo(
+    () => ({ theme, toggleTheme }),
+    [theme, toggleTheme]
+  );
+
   return (
-    <ThemeContext value={{ theme, toggleTheme }}>
+    <ThemeContext value={value}>
       {children}
     </ThemeContext>
   );

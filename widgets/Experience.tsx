@@ -1,23 +1,19 @@
 "use client";
 
-import { useLanguage } from "@/lib/LanguageContext";
-import ExperienceCard from "@/components/ExperienceCard";
+import { useLanguage } from "@/shared/providers/LanguageProvider";
+import SectionHeader from "@/shared/ui/SectionHeader";
+import ExperienceCard from "@/widgets/ExperienceCard";
 
 export default function Experience() {
   const { t } = useLanguage();
 
   return (
     <section id="experience" className="scroll-mt-24">
-      <div className="flex items-center gap-4 mb-8">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-accent-light">
-          {t.nav.experience}
-        </h2>
-        <div className="h-px flex-1 bg-border" />
-      </div>
+      <SectionHeader title={t.nav.experience} />
       <div className="flex flex-col gap-4">
-        {t.experience.map((entry, index) => (
+        {t.experience.map((entry) => (
           <ExperienceCard
-            key={index}
+            key={entry.company + "-" + entry.date}
             date={entry.date}
             role={entry.role}
             company={entry.company}
