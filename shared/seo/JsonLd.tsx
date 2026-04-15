@@ -30,10 +30,6 @@ const personSchema = {
     "@type": "Place",
     name: "Remote",
   },
-  worksFor: {
-    "@type": "Organization",
-    name: "Wagner Junior Engineering",
-  },
 };
 
 const websiteSchema = {

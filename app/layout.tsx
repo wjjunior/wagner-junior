@@ -14,15 +14,15 @@ export const metadata: Metadata = {
     template: "%s | Wagner Junior",
   },
   description:
-    "Staff Full Stack Engineer with 14+ years building scalable systems end-to-end. Remote contractor for global tech companies. Expertise in TypeScript, React, Node.js, PostgreSQL, and AI-powered platforms.",
+    "Staff Full Stack Engineer with 14+ years building scalable systems end-to-end. Shipping AI agents in production. Expertise in TypeScript, React, Node.js, PostgreSQL, and AI-powered platforms.",
   keywords: [
     "staff engineer",
     "staff full stack engineer",
     "fullstack developer",
     "full stack developer",
     "senior software engineer",
-    "remote engineer",
-    "remote software engineer",
+    "AI engineer",
+    "LLM engineer",
     "TypeScript developer",
     "React developer",
     "Node.js developer",
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     siteName: "Wagner Junior",
     title: "Wagner Junior | Staff Full Stack Engineer",
     description:
-      "Staff Full Stack Engineer — 14+ years shipping scalable systems for global tech companies. TypeScript, React, Node.js. Remote & available.",
+      "Staff Full Stack Engineer — 14+ years shipping scalable systems end-to-end. Shipping AI agents in production. TypeScript, React, Node.js.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Wagner Junior | Staff Full Stack Engineer",
     description:
-      "Staff Full Stack Engineer — 14+ years shipping scalable systems for global tech companies. TypeScript, React, Node.js. Remote & available.",
+      "Staff Full Stack Engineer — 14+ years shipping scalable systems end-to-end. Shipping AI agents in production. TypeScript, React, Node.js.",
   },
   robots: {
     index: true,

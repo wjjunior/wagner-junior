@@ -15,39 +15,38 @@ export const translations: Record<"en" | "pt", Translations> = {
     about: {
       title: "About",
       paragraphs: [
-        "I'm a Staff-level Full Stack Engineer with 14+ years of experience building and scaling web applications. I specialize in TypeScript, React, and Node.js — and I ship fast, own systems end-to-end, and obsess over developer experience and product quality.",
-        "I've led full-stack development across diverse domains — from digital identity platforms and event-driven architectures to edtech products serving millions of users globally. I drive architecture decisions, mentor engineers, define technical standards, and ship features with full ownership from design to deployment.",
-        "Currently, I operate my own engineering consultancy serving global tech companies at Staff and Senior level. Alongside client work, I'm building a production multi-agent AI orchestration platform — coordinating specialized LLM agents for autonomous task execution, intelligent model routing, and security hardening.",
-        "I thrive in high-autonomy, high-velocity environments where engineering decisions directly shape the product. My sweet spot is the intersection of scalable architecture, full-stack TypeScript, and intelligent automation.",
+        "Staff-level Full Stack Engineer with 14+ years of experience building and scaling web applications in TypeScript, React, and Node.js. I ship fast, own systems end-to-end, and care deeply about developer experience and product quality.",
+        "Currently working as a Staff Engineer leading full-stack development across Node.js, React, TypeScript, PostgreSQL, Redis, Kafka, and AWS. I also build and operate production multi-agent AI systems that coordinate specialized LLM agents for autonomous task execution, with intelligent model routing and session lifecycle management across multiple agent roles.",
+        "Throughout my career I've consistently taken on technical leadership roles — driving architecture decisions, mentoring engineers, defining standards (ADRs, CI/CD, design systems), and shipping products used by millions. I'm actively building expertise at the intersection of software engineering and AI, focusing on LLM orchestration, agent architectures, and AI-powered product features as a natural extension of my full-stack background.",
+        "I work best in high-autonomy, high-velocity environments where engineering decisions directly shape the product. I bring together deep full-stack TypeScript experience, scalable architecture thinking, and hands-on AI/automation skills. Core stack: TypeScript · React · Node.js/Express/NestJS · PostgreSQL · Redis · AWS · Next.js · GraphQL · AI/LLM Integration.",
       ],
     },
     experience: [
       {
         date: "OCT 2023 — PRESENT",
-        role: "Founder & Staff Engineer",
-        company: "Wagner Junior LTDA",
-        companyUrl: "https://wagnerjunior.dev",
+        role: "Staff Full Stack Engineer",
+        company: "Stealth Startup",
         description:
-          "Software engineering consultancy serving multiple global tech companies as a dedicated contractor, operating at Staff and Senior level with full technical autonomy. Leading full-stack architecture across React, TypeScript, Node.js, PostgreSQL, Redis, and AWS. Building and operating a production multi-agent AI platform on OpenClaw, orchestrating specialized LLM agents for marketing automation, content generation, and SaaS operations.",
-        tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "AI/LLM", "OpenClaw"],
+          "Staff-level engineer leading full-stack development for a US-based company, owning end-to-end product delivery from architecture through deployment in a fast-paced, high-autonomy, distributed environment. Architecting and shipping product features with React, TypeScript, Node.js/Express/NestJS, PostgreSQL, Redis, SQS, Kafka, and AWS. Leading technical decision-making on API design, data modeling, and system integration patterns. Defining engineering standards including CI/CD pipelines, monitoring strategies, and ADRs. Building production multi-agent orchestration systems that coordinate specialized LLM agents for autonomous task execution, intelligent model routing, and session lifecycle management.",
+        tags: ["React", "TypeScript", "Node.js", "NestJS", "PostgreSQL", "Redis", "SQS", "Kafka", "AWS", "AI/LLM"],
       },
       {
         date: "OCT 2023 — JAN 2026",
-        role: "Full Stack Engineer",
+        role: "Full Stack Developer",
         company: "D3",
         companyUrl: "https://d3.com/",
-        location: "Las Vegas, NV, USA",
+        location: "Las Vegas, NV",
         description:
-          "Led full-stack development of a digital identity platform, designing and shipping scalable applications with complex authentication flows, event-driven processing, and distributed data management. Built end-to-end features across React, TypeScript, NestJS, Kafka, GraphQL, and PostgreSQL with full ownership from architecture to deployment. Drove technical decisions autonomously, defining API contracts, data models, and system integration patterns.",
-        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Event-Driven"],
+          "Led full-stack development of decentralized identity and tokenized domain solutions, shipping production features across React, TypeScript, NestJS, Kafka, GraphQL, and PostgreSQL in a fast-paced startup environment. Designed and shipped scalable web applications for blockchain-based digital identity, handling secure authentication flows and tokenized domain management. Built end-to-end features with full ownership from architecture to deployment. Drove technical decisions autonomously, defining API contracts, data models, and system integration patterns across the platform.",
+        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Blockchain", "Web3"],
       },
       {
         date: "JUL 2021 — OCT 2023",
-        role: "Front End Engineer · Tech Lead",
+        role: "Front End Developer",
         company: "Hotmart",
         companyUrl: "https://hotmart.com/",
         description:
-          "Tech Lead on the digital education platform serving millions of users globally. Led front-end architecture decisions, mentored engineers, and drove modern development practices across multiple product teams. Architected the company's micro front-end platform using Module Federation. Defined technical standards including ADRs, CI/CD pipelines, and monitoring strategies. Drove the evolution of the company-wide design system.",
+          "Tech Lead on the digital education platform serving millions of users globally. Led front-end architecture decisions, mentored engineers, and drove the adoption of modern development practices across multiple product teams. Collaborated on the architecture and implementation of the company's micro front-end platform using Module Federation, enabling independent team deployments and reducing release cycle time. Defined and enforced technical standards including ADRs, CI/CD pipelines (Jenkins, Drone), and monitoring strategies (Sentry, New Relic). Drove the evolution of the company-wide design system. Built and shipped features using React, Vue.js, TypeScript, Redux, and integrated AWS services (S3, CloudFront). Delivered internationalization (i18n) support across the platform.",
         tags: ["React", "Vue.js", "TypeScript", "Redux", "AWS", "Module Federation", "Design Systems"],
       },
       {
@@ -57,7 +56,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         companyUrl: "https://dito.com.br/",
         location: "Belo Horizonte, BR",
         description:
-          "Full-stack engineer building high-performance CRM web applications with React and serverless backend services on Google Cloud. Developed SPAs focused on performance and component reusability. Integrated serverless backend services using Google Cloud Functions, designing event-driven data pipelines.",
+          "Full-stack engineer building high-performance CRM web applications with React and serverless backend services on Google Cloud. Developed SPAs with React, TypeScript, Redux, and Styled Components, focused on performance and component reusability. Integrated serverless backend services using Google Cloud Functions, designing event-driven data pipelines. Contributed to the evolution of the company's design system, establishing shared component libraries and documentation standards.",
         tags: ["React", "TypeScript", "Redux", "Styled Components", "Google Cloud"],
       },
       {
@@ -67,7 +66,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         companyUrl: "https://www.infogest.com.br/",
         location: "Belo Horizonte, BR",
         description:
-          "Delivered full-stack consulting across multiple clients and industries, leading modernization of legacy systems and building greenfield applications. Designed REST and SOAP API integrations, microservices architectures, and data processing pipelines. Led architectural transitions from monolithic to modern service-oriented models.",
+          "Delivered full-stack consulting across multiple clients and industries, leading modernization of legacy systems and building greenfield applications. Built web applications and refactored legacy systems using Node.js, React, Vue.js, Laravel, and GraphQL. Designed REST and SOAP API integrations, microservices architectures, and data processing pipelines. Led architectural transitions from monolithic to modern service-oriented models for enterprise clients.",
         tags: ["Node.js", "Laravel", "Vue.js", "React", "GraphQL", "REST", "Microservices"],
       },
       {
@@ -76,8 +75,8 @@ export const translations: Record<"en" | "pt", Translations> = {
         company: "EVG Sistemas",
         companyUrl: "http://sistemasevg.com.br/",
         description:
-          "Application development and technical support for commercial and accounting automation software. Built solutions in Delphi, PHP, and JavaScript.",
-        tags: ["Delphi", "PHP", "JavaScript"],
+          "Customer service providing technical support and assistance in the use of commercial and accounting automation software through online chat and telephone. Application development in Delphi, PHP, and Vanilla JS.",
+        tags: ["Delphi", "PHP", "Vanilla JS"],
       },
     ],
     footer: {
@@ -107,39 +106,38 @@ export const translations: Record<"en" | "pt", Translations> = {
     about: {
       title: "Sobre",
       paragraphs: [
-        "Sou Engenheiro Full Stack nível Staff com mais de 14 anos de experiência construindo e escalando aplicações web. Minha especialidade é TypeScript, React e Node.js — entrego rápido, sou dono dos sistemas de ponta a ponta e sou obcecado por experiência do desenvolvedor e qualidade do produto.",
-        "Liderei o desenvolvimento full-stack em domínios diversos — de plataformas de identidade digital e arquiteturas orientadas a eventos a produtos edtech servindo milhões de usuários globalmente. Conduzo decisões de arquitetura, mentoro engenheiros, defino padrões técnicos e entrego funcionalidades com total ownership do design ao deploy.",
-        "Atualmente, opero minha própria consultoria de engenharia atendendo empresas de tecnologia globais em nível Staff e Senior. Paralelamente, estou construindo uma plataforma de orquestração multi-agente de IA em produção — coordenando agentes LLM especializados para execução autônoma de tarefas, roteamento inteligente de modelos e hardening de segurança.",
-        "Prospero em ambientes de alta autonomia e alta velocidade, onde decisões de engenharia moldam diretamente o produto. Meu ponto forte é a interseção entre arquitetura escalável, TypeScript full-stack e automação inteligente.",
+        "Engenheiro Full Stack nível Staff com mais de 14 anos de experiência construindo e escalando aplicações web em TypeScript, React e Node.js. Entrego rápido, sou dono dos sistemas de ponta a ponta e me importo profundamente com experiência do desenvolvedor e qualidade do produto.",
+        "Atualmente atuo como Staff Engineer liderando desenvolvimento full-stack em Node.js, React, TypeScript, PostgreSQL, Redis, Kafka e AWS. Também construo e opero sistemas multi-agente de IA em produção que coordenam agentes LLM especializados para execução autônoma de tarefas, com roteamento inteligente de modelos e gerenciamento do ciclo de vida de sessões entre múltiplos papéis de agente.",
+        "Ao longo da minha carreira, assumi consistentemente papéis de liderança técnica — conduzindo decisões de arquitetura, mentorando engenheiros, definindo padrões (ADRs, CI/CD, design systems) e entregando produtos usados por milhões. Estou ativamente construindo expertise na interseção entre engenharia de software e IA, com foco em orquestração de LLMs, arquiteturas de agentes e funcionalidades de produto potencializadas por IA como uma extensão natural do meu background full-stack.",
+        "Prospero em ambientes de alta autonomia e alta velocidade, onde decisões de engenharia moldam diretamente o produto. Combino experiência profunda em TypeScript full-stack, pensamento de arquitetura escalável e habilidades práticas em IA/automação. Stack principal: TypeScript · React · Node.js/Express/NestJS · PostgreSQL · Redis · AWS · Next.js · GraphQL · AI/LLM Integration.",
       ],
     },
     experience: [
       {
         date: "OUT 2023 — PRESENTE",
-        role: "Founder & Staff Engineer",
-        company: "Wagner Junior LTDA",
-        companyUrl: "https://wagnerjunior.dev",
+        role: "Staff Full Stack Engineer",
+        company: "Stealth Startup",
         description:
-          "Consultoria de engenharia de software atendendo múltiplas empresas de tecnologia globais como contratado dedicado, operando em nível Staff e Senior com total autonomia técnica. Liderança técnica full-stack em React, TypeScript, Node.js, PostgreSQL, Redis e AWS. Construindo e operando uma plataforma multi-agente de IA em produção com OpenClaw, orquestrando agentes LLM especializados para automação de marketing, geração de conteúdo e operações SaaS.",
-        tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "AI/LLM", "OpenClaw"],
+          "Engenheiro nível Staff liderando desenvolvimento full-stack para uma empresa americana, assumindo entrega de ponta a ponta do produto, da arquitetura ao deploy, em um ambiente distribuído de alta velocidade e autonomia. Arquitetando e entregando funcionalidades com React, TypeScript, Node.js/Express/NestJS, PostgreSQL, Redis, SQS, Kafka e AWS. Conduzindo decisões técnicas sobre design de APIs, modelagem de dados e padrões de integração de sistemas. Definindo padrões de engenharia incluindo pipelines CI/CD, estratégias de monitoramento e ADRs. Construindo sistemas de orquestração multi-agente em produção que coordenam agentes LLM especializados para execução autônoma de tarefas, roteamento inteligente de modelos e gerenciamento do ciclo de vida de sessões.",
+        tags: ["React", "TypeScript", "Node.js", "NestJS", "PostgreSQL", "Redis", "SQS", "Kafka", "AWS", "AI/LLM"],
       },
       {
         date: "OUT 2023 — JAN 2026",
-        role: "Engenheiro Full Stack",
+        role: "Desenvolvedor Full Stack",
         company: "D3",
         companyUrl: "https://d3.com/",
-        location: "Las Vegas, NV, USA",
+        location: "Las Vegas, NV",
         description:
-          "Liderei o desenvolvimento full-stack de uma plataforma de identidade digital, projetando e entregando aplicações escaláveis com fluxos complexos de autenticação, processamento orientado a eventos e gerenciamento de dados distribuídos. Construí funcionalidades de ponta a ponta com React, TypeScript, NestJS, Kafka, GraphQL e PostgreSQL com total ownership da arquitetura ao deploy. Conduzi decisões técnicas com autonomia, definindo contratos de API, modelos de dados e padrões de integração.",
-        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Event-Driven"],
+          "Liderei o desenvolvimento full-stack de soluções de identidade descentralizada e domínios tokenizados, entregando funcionalidades em produção com React, TypeScript, NestJS, Kafka, GraphQL e PostgreSQL em um ambiente de startup de alta velocidade. Projetei e entreguei aplicações web escaláveis para identidade digital baseada em blockchain, lidando com fluxos seguros de autenticação e gerenciamento de domínios tokenizados. Construí funcionalidades de ponta a ponta com total ownership da arquitetura ao deploy. Conduzi decisões técnicas com autonomia, definindo contratos de API, modelos de dados e padrões de integração de sistemas em toda a plataforma.",
+        tags: ["React", "TypeScript", "NestJS", "GraphQL", "PostgreSQL", "Kafka", "Blockchain", "Web3"],
       },
       {
         date: "JUL 2021 — OUT 2023",
-        role: "Engenheiro Front End · Tech Lead",
+        role: "Desenvolvedor Front End",
         company: "Hotmart",
         companyUrl: "https://hotmart.com/",
         description:
-          "Tech Lead na plataforma de educação digital atendendo milhões de usuários globalmente. Liderei decisões de arquitetura front-end, mentorei engenheiros e impulsionei práticas modernas de desenvolvimento em múltiplos times de produto. Arquitetei a plataforma de micro front-ends da empresa usando Module Federation. Defini padrões técnicos incluindo ADRs, pipelines CI/CD e estratégias de monitoramento. Conduzi a evolução do design system da empresa.",
+          "Tech Lead na plataforma de educação digital atendendo milhões de usuários globalmente. Liderei decisões de arquitetura front-end, mentorei engenheiros e impulsionei a adoção de práticas modernas de desenvolvimento em múltiplos times de produto. Colaborei na arquitetura e implementação da plataforma de micro front-ends da empresa usando Module Federation, permitindo deploys independentes e reduzindo o ciclo de release. Defini e apliquei padrões técnicos incluindo ADRs, pipelines CI/CD (Jenkins, Drone) e estratégias de monitoramento (Sentry, New Relic). Conduzi a evolução do design system da empresa. Construí e entreguei funcionalidades com React, Vue.js, TypeScript, Redux e serviços AWS integrados (S3, CloudFront). Entreguei suporte a internacionalização (i18n) em toda a plataforma.",
         tags: ["React", "Vue.js", "TypeScript", "Redux", "AWS", "Module Federation", "Design Systems"],
       },
       {
@@ -149,7 +147,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         companyUrl: "https://dito.com.br/",
         location: "Belo Horizonte, BR",
         description:
-          "Engenheiro full-stack construindo aplicações web CRM de alta performance com React e serviços backend serverless no Google Cloud. Desenvolvi SPAs com foco em performance e reusabilidade de componentes. Integrei serviços backend serverless usando Google Cloud Functions, projetando pipelines de dados orientados a eventos.",
+          "Engenheiro full-stack construindo aplicações web CRM de alta performance com React e serviços backend serverless no Google Cloud. Desenvolvi SPAs com React, TypeScript, Redux e Styled Components, com foco em performance e reusabilidade de componentes. Integrei serviços backend serverless usando Google Cloud Functions, projetando pipelines de dados orientados a eventos. Contribuí para a evolução do design system da empresa, estabelecendo bibliotecas de componentes compartilhados e padrões de documentação.",
         tags: ["React", "TypeScript", "Redux", "Styled Components", "Google Cloud"],
       },
       {
@@ -159,7 +157,7 @@ export const translations: Record<"en" | "pt", Translations> = {
         companyUrl: "https://www.infogest.com.br/",
         location: "Belo Horizonte, BR",
         description:
-          "Realizei consultoria full-stack para múltiplos clientes e indústrias, liderando modernização de sistemas legados e construindo aplicações greenfield. Projetei integrações de APIs REST e SOAP, arquiteturas de microsserviços e pipelines de processamento de dados. Liderei transições arquiteturais de modelos monolíticos para orientados a serviços modernos.",
+          "Realizei consultoria full-stack para múltiplos clientes e indústrias, liderando modernização de sistemas legados e construindo aplicações greenfield. Construí aplicações web e refatorei sistemas legados usando Node.js, React, Vue.js, Laravel e GraphQL. Projetei integrações de APIs REST e SOAP, arquiteturas de microsserviços e pipelines de processamento de dados. Liderei transições arquiteturais de modelos monolíticos para orientados a serviços modernos para clientes enterprise.",
         tags: ["Node.js", "Laravel", "Vue.js", "React", "GraphQL", "REST", "Microservices"],
       },
       {
@@ -168,8 +166,8 @@ export const translations: Record<"en" | "pt", Translations> = {
         company: "EVG Sistemas",
         companyUrl: "http://sistemasevg.com.br/",
         description:
-          "Desenvolvimento de aplicações e suporte técnico para software de automação comercial e contábil. Construção de soluções em Delphi, PHP e JavaScript.",
-        tags: ["Delphi", "PHP", "JavaScript"],
+          "Atendimento ao cliente prestando suporte técnico e assistência no uso de softwares de automação comercial e contábil via chat online e telefone. Desenvolvimento de aplicações em Delphi, PHP e Vanilla JS.",
+        tags: ["Delphi", "PHP", "Vanilla JS"],
       },
     ],
     footer: {
